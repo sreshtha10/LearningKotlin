@@ -1,3 +1,4 @@
+
 // immutable
 val name:String = "Mehrotra"
 
@@ -33,6 +34,20 @@ fun main(){
     }
     
     
+    
+    
+   	// initializing var with if
+   	
+    var greetingToPrint: String? = if(greeting != null) greeting else "Hi"
+    println(greetingToPrint)
+    
+    // using when
+    greeting = null
+    greetingToPrint = when(greeting){
+        null -> "Hi"
+        else -> greeting
+    }
+    println(greetingToPrint)
 }
 
-// variables
+
