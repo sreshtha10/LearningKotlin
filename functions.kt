@@ -53,3 +53,20 @@ fun max(a:Int, b:Int):Int{
 // local function = fun other(){ fun local() =3}
 
 
+/*fun main(){
+    val listt = listOf('a','b','c')
+    println(listt.joinToString(separator = "", prefix = "(", postfix= ")"))
+    
+    displaySeparator()
+}*/
+
+// using default
+/*fun displaySeparator(character:Char = '*', size:Int = 10){
+    // repeat loop
+    repeat(size){
+        print(character)
+    }
+}*/
+
+// in Java we use method overloading for named functions, default parameters etc
+
