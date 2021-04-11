@@ -1,10 +1,14 @@
 fun main(){
-    // function type and lambdas in Kotlin 
+   // function type and lambdas in Kotlin 
+   // Lambda syntax  : {x: Int,y: Int ->x+y}
+   
+   
    val sum2 :(Int,Int)->Int = {x,y->x+y}
    val isEven : (Int) -> Boolean = {i:Int ->i%2 == 0}
    
    // It is not mandatory to mention the return type and parameter type in lambda
    val sum = {x:Int,y:Int -> x+y}
+   
    
    
    val result : Boolean = isEven(42)
@@ -17,7 +21,18 @@ fun main(){
    list.any(isEven)
    println(list.filter(isEven));
    
+   val it = 1;
+   //multiline lambda
+   list.any{
+       println("Hey $it")
+       it > 0
+   };
    
+   // destructing declarations
+   // map.mapValues {entry -> "${entry.key} -> ${entry.value}"}
+   // or map.mapValues{(key,value) -> "$value!"}
+   // or map.mapValues{( _ ,value) -> "$value!"} if one parameter is not used mention it by underscore
+    
    // calling lambda directly
    {println("hey !")}();
    //or better use like this:
