@@ -69,4 +69,4 @@ fun max(a:Int, b:Int):Int{
 }*/
 
 // in Java we use method overloading for named functions, default parameters etc
-
+// Return from inside a function always return to the fun statement (rule)
