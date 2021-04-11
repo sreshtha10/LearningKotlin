@@ -56,6 +56,16 @@ fun main(){
    val (evenList,oddList) = list.partition(){i -> i%2 == 0}
    println("Even List :$evenList  Odd List: $oddList ")
    
+   val fruits = listOf("Apple","Orange","Mango","Banana","Peach","Berry","Pineapple")
+   val groups = fruits.groupBy(){i -> i.length}
+   println(groups)
    
+   val list2 = listOf("a", "b", "c", "d")
+   val m : Map<String,Int> = list2.associate(){it to it.length }
+   println(m)
+   
+   val zipper = list.zip(list2)
+   println(zipper)
+      
    
 }
