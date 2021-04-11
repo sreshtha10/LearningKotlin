@@ -35,3 +35,27 @@ throws out all the elements that don't satisfy the predicate
 
 */
 
+
+fun main(){
+   val list = listOf(1,2,3,4,5,6)
+   val filteredList = list.filter(){i -> i%2 == 0}
+   println(filteredList)
+   
+   val mappedList = list.map(){i -> i*i}
+   println(mappedList)
+   
+   val isEven = list.any(){i -> i%2 == 0}
+   println(isEven)
+   
+   val findGreaterThanSix: Int? = list.find(){i -> i>6}
+   println(findGreaterThanSix)
+   
+   val countOdd = list.count(){i -> i%2 != 0}
+   println(countOdd)
+   
+   val (evenList,oddList) = list.partition(){i -> i%2 == 0}
+   println("Even List :$evenList  Odd List: $oddList ")
+   
+   
+   
+}
