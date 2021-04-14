@@ -50,3 +50,48 @@ fun main(){
 
     
 }
+
+/*interface Expr
+class Num(val value:Int):Expr
+class Sum(val left:Expr,val right:Expr):Expr
+fun eval(e:Expr):Int = when(e){
+    is Num -> e.value
+    is Sum -> eval(e.left)+eval(e.right)
+}
+
+this will throw a compile time error because the other subclasses may not be present in the same file
+
+to prevent this we can either use exception handling or sealed class modifier
+
+Sealed modifier restricts class hierarchy: all subclasses must be located in the same file
+*/
+
+/*
+Using Exception handling:
+
+interface Expr
+class Num(val value:Int):Expr
+class Sum(val left:Expr,val right:Expr):Expr
+fun eval(e:Expr):Int = when(e){
+    is Num -> e.value
+    is Sum -> eval(e.left)+eval(e.right)
+    else -> throw IllegalArgumentException("Error")
+}
+
+*/
+
+
+
+/*
+ 
+ Using sealed 
+
+sealed class Expr
+class Num(val value:Int):Expr
+class Sum(val left:Expr,val right:Expr):Expr
+fun eval(e:Expr):Int = when(e){
+    is Num -> e.value
+    is Sum -> eval(e.left)+eval(e.right)
+}
+
+*/
