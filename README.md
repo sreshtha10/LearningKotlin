@@ -1,2 +1,2 @@
 # LearningKotlin
-Switching from Java to Kotlin for Android dev
+Important concepts of Kotlin are demonstrated in this repository.
