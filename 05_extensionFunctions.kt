@@ -39,6 +39,22 @@
  */
 
 // Although extensions can be overloaded.
+fun main(args: Array<String>) {
+    //kotlin extension functions
+    fun Circle.perimeter():Double{
+        return 2*Math.PI*radius
+    }
+    
+    val c1 = Circle(2.5)
+    println(c1.area())
+    println(c1.perimeter())
+}
 
+
+class Circle(val radius:Double){
+    fun area():Double{
+        return Math.PI*radius*radius
+    }
+}
 
 
